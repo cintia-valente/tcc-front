@@ -4,7 +4,11 @@ export interface Patient {
     idPatient: string;
     name: string;
     age: number;
-    gender: string;
+    gender: Gender;
     examList?: Exam[];
   }
   
+  export enum Gender {
+    Femino = 'F',
+    Masculino = 'M'
+  }
