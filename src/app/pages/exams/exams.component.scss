@@ -1,9 +1,41 @@
-.col-md-4 {
-   padding: 1rem 0rem 0rem 0rem;
-}
+.col-md-5 {
+    padding-top: 2rem;
+    padding-left: 6rem;
+    margin-left: 15rem;
 
-.btn {
-    display: flex;
-    justify-content: center;
-    width: 9rem;
+    h2 {
+        margin-bottom: 2rem;
+    }
+
+    .pacient-exam {
+        display: flex;
+
+        .form-patient {
+            margin-right: 4rem;
+        }
+    }
+
+    .exams-list {
+        padding: 0;
+
+        li {
+            line-height: 0.7;
+            margin-top: 0.5rem;
+        }
+
+        &:hover {
+            cursor: pointer;
+            color: rgb(0, 110, 255);
+        }
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+
+        .btn {
+            width: 11rem;
+        }
+    }
 }

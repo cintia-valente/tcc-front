@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment.development';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, catchError, tap, throwError } from 'rxjs';
 import { Exam } from '../models/Exam';
+
 
 @Injectable({
   providedIn: 'root'
@@ -23,4 +24,35 @@ export class ExamService {
     return this.http.get<Exam[]>(`${this.apiUrl}/list-exams/${age}/${gender}`, { params });
   }
   
+  // getExamById(idExam: string): Observable<Exam> {
+  //   const url = `${this.apiUrl}/${idExam}`;
+  //   return this.http.get<Exam>(url);
+  // }
+
+  // getExamById(idExam: string): Observable<Exam> {
+  //   return this.http.get<Exam>(`${this.apiUrl}/${idExam}`);
+  // }
+
+  getExamById(idExam: string): Observable<Exam> {
+    const url = `${this.apiUrl}/${idExam}`;
+    return this.http.get<Exam>(url).pipe(
+      tap((data) => console.log('Data:', data)),
+      catchError((error) => {
+        console.error('Error:', error);
+        return new Observable<never>(() => {});
+      })
+    );
+  }
+  
+
+  // getByType(exam: Exam): string {
+  //   // Lógica para mapear o tipo de exame para o componente correspondente
+  //   if (exam.description.includes('Papanicolau')) {
+  //     return 'Papanicolau';
+  //   } else if (exam.description.includes('Mamografia')) {
+  //     return 'Mamografia';
+  //   } else {
+  //     return 'Desconhecido';
+  //   }
+  // }
 }

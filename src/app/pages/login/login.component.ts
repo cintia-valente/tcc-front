@@ -11,7 +11,7 @@ export class LoginComponent {
 
   constructor(private router: Router) { }
 
-  irParaExame() {
+  login() {
     this.router.navigate(['/exames']);
   }
 }

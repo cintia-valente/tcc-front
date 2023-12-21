@@ -17,14 +17,22 @@ import { ToastrModule } from 'ngx-toastr';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
+import { PapanicolauComponent } from './pages/exams-list/papanicolau/papanicolau.component';
+import { CommonModule } from '@angular/common';
+//import { ExamDetailsComponent } from './pages/exam-details/exam-details.component';
+//import { MamografiaComponent } from './pages/exams-list/mamografia/mamografia.component';
 
 @NgModule({
   declarations: [
     ExamsComponent,
+    //ExamDetailsComponent,
     LoginComponent,
+    PapanicolauComponent,
+   // MamografiaComponent,
     AppComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
