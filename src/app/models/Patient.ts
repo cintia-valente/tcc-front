@@ -9,6 +9,6 @@ export interface Patient {
   }
   
   export enum Gender {
-    Femino = 'F',
+    Feminino = 'F',
     Masculino = 'M'
   }

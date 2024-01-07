@@ -1,3 +1,6 @@
+// .a {
+//     background-color: rgb(227, 227, 244);    
+// }
 .col-md-5 {
     padding-top: 2rem;
     padding-left: 6rem;
@@ -9,23 +12,36 @@
 
     .pacient-exam {
         display: flex;
-
-        .form-patient {
-            margin-right: 4rem;
-        }
     }
 
-    .exams-list {
-        padding: 0;
+    .exams-list-show {
+        margin-top: -4rem;
+        margin-left: 4.3rem;
 
-        li {
-            line-height: 0.7;
-            margin-top: 0.5rem;
+        .exams {
+            width: max-content;
         }
 
-        &:hover {
-            cursor: pointer;
-            color: rgb(0, 110, 255);
+        .exams-title {
+            margin-bottom: 2rem;
+            color: #4118bc;
+            font-style: italic;
+        }
+
+        .exams-list {
+            padding: 0;
+
+            li {
+                line-height: 0.7;
+                list-style: none;
+                margin-top: 0.5rem;
+                text-decoration: underline;
+            }
+
+            &:hover {
+                cursor: pointer;
+                color: rgb(0, 110, 255);
+            }
         }
     }
 

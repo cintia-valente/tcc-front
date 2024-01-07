@@ -1,52 +1,54 @@
-<div class="col-md-5 offset-md-1">
-  <h2>Exames</h2>
-  <form [formGroup]="pacientForm">
-    <div class="pacient-exam">
-      <div class="col-md-12 form-patient">
-        <div class="col-md-12">
-          <label for="name" class="form-label">Nome</label>
-          <input type="text" class="form-control" id="name" formControlName="name">
-        </div>
-
-        <div class="col-md-12">
-          <div class="row">
-            <div class="col-md-6">
-              <label for="gender" class="form-label">Sexo</label>
-              <select class="form-select" id="gender" formControlName="gender">
-                <option *ngFor="let option of genderOptions" [value]="option">
-                  {{ option }}
-                </option>
-              </select>
-            </div>
-            <div class="col-md-6">
-              <label for="age" class="form-label">Idade</label>
-              <input type="number" class="form-control" id="age" formControlName="age">
-            </div>
+<app-nav-bar></app-nav-bar>
+<div class="a">
+  <div class="col-md-5 offset-md-1">
+    <h2>Cadastro</h2>
+    <form [formGroup]="pacientForm">
+      <div class="pacient-exam">
+        <div class="col-md-12 form-patient">
+          <div class="col-md-12">
+            <label for="name" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="name" formControlName="name">
           </div>
 
-        </div>
-      </div>
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-6">
+                <label for="gender" class="form-label">Sexo</label>
+                <select class="form-select" id="gender" formControlName="gender">
+                  <option *ngFor="let option of genderOptions" [value]="option">
+                    {{ option }}
+                  </option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="age" class="form-label">Idade</label>
+                <input type="number" class="form-control" id="age" formControlName="age">
+              </div>
+            </div>
 
-      <div class="col-md-12">
-        <div *ngIf="exams && exams.length > 0">
-          <div class="exams">
-            <ul *ngFor="let exam of exams" class="exams-list">
-              <li> 
-                <a (click)="enter(exam.name)">{{ exam.name }}</a>
-              </li>
-            </ul>
           </div>
         </div>
+
+        <div class="col-md-12 exams-list-show">
+          <div *ngIf="exams && exams.length > 0">
+            <div class="exams">
+              <h2 class="exams-title">Exames:</h2> 
+              <ul *ngFor="let exam of exams" class="exams-list">
+                <li>
+                  <a (click)="enter(exam.name)">{{ exam.name }}</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
       </div>
-    </div>
 
-    <!-- <ul *ngFor="let exam of exams" class="exams-list" (click)="urlLocation(exam.urlLocations)">
-      <li>{{ exam.name }}</li>
-    </ul> -->
+      <div class="button">
+        <button (click)="getExams()" type="submit" class="btn btn-primary">Salvar</button>
+      </div>
 
-    <div class="button">
-      <button (click)="getExams()" type="submit" class="btn btn-primary">Salvar</button>
-    </div>
+    </form>
+  </div>
 
-  </form>
 </div>

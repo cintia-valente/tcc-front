@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
   templateUrl: './exams.component.html',
   styleUrls: ['./exams.component.scss']
 })
-export class ExamsComponent implements OnInit{
+export class ExamsComponent implements OnInit {
 
   pacientForm!: FormGroup;
   exams!: Exam[];
@@ -39,7 +39,7 @@ export class ExamsComponent implements OnInit{
     'Lipidograma': 'bf4c3ada-4ddf-41bd-8a2d-3bc5ae23a482'
   };
 
-  constructor(private fb: FormBuilder, private router: Router, private examService: ExamService, private toastr: ToastrService) {}
+  constructor(private fb: FormBuilder, private router: Router, private examService: ExamService, private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.formPacient();
@@ -55,14 +55,16 @@ export class ExamsComponent implements OnInit{
   }
 
   getExams() {
-    if(this.pacientForm.valid) {
+    if (this.pacientForm.valid) {
 
       const age = this.pacientForm.get('age')?.value;
       const gender = this.pacientForm.get('gender')?.value;
-      
+
       this.examService.getExamsByAgeAndGender(age, gender).subscribe({
         next: (data) => {
           this.exams = data;
+          console.log(data);
+
         },
         error: (error: HttpErrorResponse) => {
           this.toastr.error(
@@ -79,7 +81,48 @@ export class ExamsComponent implements OnInit{
 
   enter(examName: string) {
     const examId = this.examIdMap[examName];
-    this.router.navigate(['/exame', examId]);
-  }
 
+    if (examName === 'Eletrocardiograma') {
+      this.router.navigate(['/exame/eletro', examId]);
+    } else if (examName === 'Mamografia') {
+      this.router.navigate(['/exame/mamografia', examId]);
+    }
+    else if (examName === 'Hemograma completo') {
+      this.router.navigate(['/exame/hemograma', examId]);
+    }
+    else if (examName === 'Densitometria óssea') {
+      this.router.navigate(['/exame/ossea', examId]);
+    }
+    else if (examName === 'TSH e T4') {
+      this.router.navigate(['/exame/tsh-t4', examId]);
+    }
+    else if (examName === 'Teste ergométrico') {
+      this.router.navigate(['/exame/ergo', examId]);
+    }
+    else if (examName === 'Exame de urina') {
+      this.router.navigate(['/exame/urina', examId]);
+    }
+    else if (examName === 'PCR') {
+      this.router.navigate(['/exame/pcr', examId]);
+    }
+    else if (examName === 'Sorologia') {
+      this.router.navigate(['/exame/soro', examId]);
+    }
+    else if (examName === 'Papanicolau') {
+      this.router.navigate(['/exame/papanicolau', examId]);
+    }
+    else if (examName === 'Glicemia e insulina') {
+      this.router.navigate(['/exame/insulina', examId]);
+    }
+    else if (examName === 'Parasitológico') {
+      this.router.navigate(['/exame/parasita', examId]);
+    }
+    else if (examName === 'PSA e toque retal') {
+      this.router.navigate(['/exame/psa', examId]);
+    }
+    else if (examName === 'Glicemia') {
+      this.router.navigate(['/exame/glicemia', examId]);
+    }
+    else this.router.navigate(['/exame/lipidograma', examId]);
+  }
 }

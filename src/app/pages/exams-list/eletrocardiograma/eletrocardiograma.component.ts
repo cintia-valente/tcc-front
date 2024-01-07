@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';;
+import { Component } from '@angular/core';
 import { Exam } from '../../../models/Exam';
 import { ExamService } from '../../../services/exam.service';
 import { ActivatedRoute } from '@angular/router';
