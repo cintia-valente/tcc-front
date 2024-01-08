@@ -1,13 +1,18 @@
-img {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    z-index: -1; /* Defina um valor menor para a imagem ficar atrás da .eletro */
-}
-
 .eletro {
-    position: relative;
-    z-index: 2;
+    padding: 3rem 0rem 0rem 0rem;
+    text-align: center;
+    background-image: url('../../../../assets/img/exames-moleculares.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0;
+    overflow: auto;
+    padding: 10.9rem;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    top: 0;
+    color: rgb(20, 20, 94);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

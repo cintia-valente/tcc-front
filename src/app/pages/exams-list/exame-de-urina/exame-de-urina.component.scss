@@ -1,5 +1,7 @@
 .urina {
-    background-image: url('../../../../assets/img/a.jpg');
+    padding: 3rem 0rem 0rem 0rem;
+    text-align: center;
+    background-image: url('../../../../assets/img/exames-moleculares.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     left: 0;
@@ -10,4 +12,7 @@
     text-align: center;
     top: 0;
     color: rgb(20, 20, 94);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

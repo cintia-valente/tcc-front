@@ -1,13 +1,22 @@
-<div *ngIf="exams && exams.length > 0">
-    <div class="exams">
-        <div *ngFor="let exam of exams" class="exams-list">
-            <div *ngIf="exam">
-                <h1>{{ exam.name }}</h1>
-                <p>{{ exam.description}}</p>
+<div class="hemograma">
+    <div class="card">
+        <div *ngIf="exams && exams.length > 0">
+            <div class="exams">
+                <div *ngFor="let exam of exams" class="exams-list">
+                    <div *ngIf="exam">
+                        <h2>{{ exam.name }}</h2>
 
-                <h5>Locais de realização: </h5>
+                        <div class="img-card">
+                            <img src="../../../../assets/img/hemograma.jpg" alt="Descrição da Imagem">
+                        </div>
 
-                <button class="btn btn-primary" (click)="openUrl(exam.urlLocations)">Clique aqui</button>
+                        <p>{{ exam.description }}</p>
+
+                        <h5>Locais de realização: </h5>
+
+                        <button class="btn btn-primary" (click)="openUrl(exam.urlLocations)">Clique aqui</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
