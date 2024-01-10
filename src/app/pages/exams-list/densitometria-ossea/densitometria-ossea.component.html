@@ -15,6 +15,11 @@
                         <h5>Locais de realização: </h5>
 
                         <button class="btn btn-primary" (click)="openUrl(exam.urlLocations)">Clique aqui</button>
+
+                        <div class="buttons">
+                            <button class="btn btn-light" [routerLink]="['/exames']">Voltar</button>
+                            <button class="btn btn-light"  [routerLink]="['']">Sair</button>
+                        </div>   
                     </div>
                 </div>
             </div>
