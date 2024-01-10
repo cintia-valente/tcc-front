@@ -15,4 +15,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .img-card {
+        height: 13.5;
+    }
+
+    p {
+        font-size: small;
+    }
+
+    .buttons {
+        margin-top: 0;
+    }
 }

@@ -32,7 +32,7 @@
         <div class="col-md-12 exams-list-show">
           <div *ngIf="exams && exams.length > 0">
             <div class="exams">
-              <h2 class="exams-title">Exames:</h2> 
+              <h2>Exames recomendados</h2> 
               <ul *ngFor="let exam of exams" class="exams-list">
                 <li>
                   <a (click)="enter(exam.name)">{{ exam.name }}</a>
@@ -45,7 +45,7 @@
       </div>
 
       <div class="button">
-        <button (click)="getExams()" type="submit" class="btn btn-primary">Salvar</button>
+        <button (click)="getExams()" type="submit" class="btn btn-primary">Buscar</button>
       </div>
 
     </form>
