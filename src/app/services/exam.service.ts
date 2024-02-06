@@ -24,15 +24,6 @@ export class ExamService {
     return this.http.get<Exam[]>(`${this.apiUrl}/list-exams/${age}/${gender}`, { params });
   }
   
-  // getExamById(idExam: string): Observable<Exam> {
-  //   const url = `${this.apiUrl}/${idExam}`;
-  //   return this.http.get<Exam>(url);
-  // }
-
-  // getExamById(idExam: string): Observable<Exam> {
-  //   return this.http.get<Exam>(`${this.apiUrl}/${idExam}`);
-  // }
-
   getExamById(idExam: string): Observable<Exam> {
     const url = `${this.apiUrl}/${idExam}`;
     return this.http.get<Exam>(url).pipe(
@@ -43,16 +34,4 @@ export class ExamService {
       })
     );
   }
-  
-
-  // getByType(exam: Exam): string {
-  //   // Lógica para mapear o tipo de exame para o componente correspondente
-  //   if (exam.description.includes('Papanicolau')) {
-  //     return 'Papanicolau';
-  //   } else if (exam.description.includes('Mamografia')) {
-  //     return 'Mamografia';
-  //   } else {
-  //     return 'Desconhecido';
-  //   }
-  // }
 }

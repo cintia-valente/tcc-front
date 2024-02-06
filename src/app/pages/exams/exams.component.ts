@@ -22,21 +22,21 @@ export class ExamsComponent implements OnInit {
   genderOptions = Object.values(Gender);
 
   examIdMap: { [examName: string]: string } = {
-    'Eletrocardiograma': '37b64c5f-5188-484f-b595-fd18e81b99d6',
-    'Mamografia': '1d42680e-8c47-4f1a-bf49-1fb1b23678e4',
-    'Hemograma completo': '861730e4-168b-41ed-a293-4b67e3211171',
-    'Densitometria óssea': '07da538e-c5fd-427d-8343-cbe9a2fc8507',
-    'TSH e T4': '7b0a6064-4eef-43c1-ac80-29ca07a8f242',
-    'Teste ergométrico': '3bb1ccbe-a321-4761-8a8e-d0eec0bdc4d6',
-    'Exame de urina': '22244443-c1d0-4cba-a2c6-e5bc00cbf21b',
-    'PCR': 'bb0253ea-258d-4160-89e2-3b38c83d5a68',
-    'Sorologia': '1658db77-5ec0-4cbf-b7b6-28427bf2833f',
-    'Papanicolau': '1472e1b2-174b-41ff-8541-72f511ccd091',
-    'Glicemia e insulina': 'd7d44cdf-dbe6-4526-a22b-7d6aa76850a8',
-    'Parasitológico': 'a790ccee-dde9-47ef-9b22-917e5602d6dc',
-    'PSA e toque retal': 'e94af675-fcba-4a2b-b938-1c0c639d5397',
-    'Glicemia': '34e42041-f264-4d3c-9595-2e2e70605275',
-    'Lipidograma': 'bf4c3ada-4ddf-41bd-8a2d-3bc5ae23a482'
+    'Eletrocardiograma': 'ef4564b9-6537-4ac0-9ac5-e0d12ad8f1f5',
+    'Mamografia': '89a5ac53-60c0-479d-81ea-545ee1409b81',
+    'Hemograma completo': '8b07b191-3732-4359-a309-05d8d3f09165',
+    'Densitometria óssea': '73fd56cf-65d0-4558-9d7e-ff91dbb5f95b',
+    'TSH e T4': '0cd08e05-af20-49e8-a951-46875d3e9f37',
+    'Teste ergométrico': '32334b37-8b2a-4462-94d4-8710844f8599',
+    'Exame de urina': '1e7a5f4d-9cf7-4eac-ad03-4c6470fc63a7',
+    'PCR': 'd3331bc1-86d3-4e7d-b8ec-1250f0cb0aed',
+    'Sorologia': '6b283795-5afb-4ab8-a583-f986d078ed87',
+    'Papanicolau': 'f3b179d8-6a5f-4bfa-83ab-8c49c06ef80e',
+    'Glicemia e insulina': '79eae44a-381f-45c8-97a8-0747d8b90651',
+    'Parasitológico': 'a88de5b2-dbcc-4754-8a07-9edf859a2e90',
+    'PSA e toque retal': '2d47211c-ddb9-43ef-a386-26150d4dfabc',
+    'Glicemia': '06ae8176-d731-4aa3-9154-3f42bb61f39e',
+    'Lipidograma': 'c181c118-d095-4611-b5cd-31d9bd3d0d84'
   };
 
   constructor(private fb: FormBuilder, private router: Router, private examService: ExamService, private toastr: ToastrService) { }
